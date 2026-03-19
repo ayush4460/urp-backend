@@ -110,13 +110,13 @@ This project follows **Clean Architecture** — a way of organising code so busi
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### Dependency Rule (never break this)
+### Dependency Rule 
 ```
-API        →  Application  →  Domain   ✅
-API        →  Infrastructure →  Domain  ✅
-Infrastructure → Application → Domain  ✅
-Application  →  Infrastructure         ❌ NEVER
-Domain       →  anything               ❌ NEVER
+API        →  Application  →  Domain   
+API        →  Infrastructure →  Domain  
+Infrastructure → Application → Domain  
+Application  →  Infrastructure        
+Domain       →  anything           
 ```
 
 ---
@@ -285,7 +285,7 @@ On first startup the API automatically seeds:
 
 ## 🌐 API Endpoints
 
-**Base URL:** `http://localhost:5000/api/v1`
+**Base URL:** `http://localhost:63823/api/v1`
 
 ### 🔓 Public (no auth needed)
 | Method | Endpoint | Description |
@@ -364,7 +364,7 @@ dotnet ef database update --startup-project ../URP.API
 ```bash
 cd ../URP.API
 dotnet run
-# → http://localhost:5000/swagger
+# → http://localhost:63823/swagger
 ```
 
 Or press **F5** in Visual Studio (set `URP.API` as startup project).
@@ -409,8 +409,8 @@ dotnet ef migrations script --idempotent --output migration.sql --startup-projec
 
 ## 🔗 Related
 
-- **Frontend Repository** → [urp-frontend](#) — React 18 + TypeScript dashboard
-- **Live API Docs** → `http://localhost:5000/swagger` (when running)
+- **Frontend Repository** → [urp-frontend](https://github.com/ayush4460/urp-client) — React 18 + TypeScript dashboard
+- **Live API Docs** → `http://localhost:63823/swagger` (when running)
 
 ---
 
